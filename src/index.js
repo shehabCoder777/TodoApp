@@ -74,6 +74,6 @@ app.post("/", (req, res) => {
   }
 });
 
-const port = 80;
-
-app.listen(port, () => console.log("app is live now on port 3000"));
+app.listen(process.env.port || 3000, () =>
+  console.log("app is live now on port 3000")
+);
