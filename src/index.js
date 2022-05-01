@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const dotenv=require("dotenv");
+const dotenv = require("dotenv");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -74,6 +74,6 @@ app.post("/", (req, res) => {
   }
 });
 
-const port = Process.env.PORT || 80;
+const port = 80;
 
 app.listen(port, () => console.log("app is live now on port 3000"));
