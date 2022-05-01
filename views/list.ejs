@@ -1,0 +1,33 @@
+<%- include('header') -%>
+
+    <div class="box" id="heading">
+        <h1>
+            <%=title%>
+        </h1>
+    </div>
+
+
+
+
+    <div class="box">
+        <form class="item" action="/" method="post">
+            <input type="text" name="name">
+            <button type="submit" name="workItem" value=<%=title%>>+</button>
+        </form>
+    </div>
+
+    <div class="box">
+
+        <% for (let i=0; i < items.length; i++) { %>
+            <form class="item" action="/" method="post">
+                <input type="checkbox" name="checkbox"  value="<%=items[i]._id %>" onchange="this.form.submit()">
+                <p>
+                    <%= items [i].name %>
+                </p>
+            </form>
+
+
+            <% } %>
+    </div>
+
+    <%- include('footer'); -%>
